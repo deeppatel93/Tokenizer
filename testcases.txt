@@ -1,0 +1,33 @@
+Input                                        Expected Output                                                 My Output
+123				decimal					decimal
+123d				MAL					MAL
+103				decimal					decimal
+0				octal					octal
+12e23				float					float	
+12e-12				float					float
+12e+12				float					float
+12.12 				float					float
+12.12e12			float					float
+12.12E12.12			MAL					MAL
+E12				MAL					MAL
+0700                                                	 Octal					octal
+0800				MAL					MAL
+12e+1212.12e-12			MAL					MAL
+-7000				MAL					MAL
+12d 12				MAL,decimal				Mal,decimal 
+12z12				decimal, [0x7a],decimal		decimal, [0x7a],decimal
+0700     12			Octal, decimal			octal, decimal
+0x3f 0213 12			hex,octal,decimal			hex,octal,decimal
+
+12e2 32 07 0X21d 09		float,decimal,octal,hex,MAL      float,decimal,octal,hex,MAL
+
+#$%				[0x23], [0x24] [0x25]		[0x23], [0x24] [0x25]
+
+23c32				MAL					MAL
+
+01				Octal					octal
+0x12				hex					hex
+0x12p				hex, [0x70]				hex, [0x70]
+Ox12p0700			hex, [0x70], octal			hex, [0x70], octal
+2132143290csdf		MAL, [0x73], MAL			MAL, [0x73], MAL
+
